@@ -30,7 +30,6 @@ export class SeviceEmpleados {
         let request = "api/Empleados/PerfilEmpleado";
 
         let header = new HttpHeaders();
-        header = header.set("Content-Type", "application/json");
         header = header.set("Authorization", "bearer " + token);
 
         return this._http.get<Empleado>(urlEmpleado + request, {headers: header});
@@ -41,7 +40,6 @@ export class SeviceEmpleados {
         let request = "api/Empleados/Subordinados";
 
         let header = new HttpHeaders();
-        header = header.set("Content-Type", "application/json");
         header = header.set("Authorization", "bearer " + token);
 
         return this._http.get<Array<Empleado>>(urlEmpleado + request, {headers: header});
