@@ -21,9 +21,11 @@ export class PerfilEmpleadoComponent implements OnInit{
   ngOnInit(): void {
     this.token = environment.token;
 
-    this._service.getPerfilEmpleado(this.token).subscribe(response => {
-      this.empleado = response;
-    })
+    if(this.token != ""){
+      this._service.getPerfilEmpleado(this.token).subscribe(response => {
+        this.empleado = response;
+      })
+    }
   }
 
   llevarFormulario(): void {

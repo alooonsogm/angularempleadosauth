@@ -21,9 +21,11 @@ export class SubordinadosComponent implements OnInit{
   ngOnInit(): void {
     this.token = environment.token;
 
-    this._service.getSubordinados(this.token).subscribe(response => {
-      this.arraySubordinados = response;
-    })
+    if(this.token != ""){
+      this._service.getSubordinados(this.token).subscribe(response => {
+        this.arraySubordinados = response;
+      })
+    }
   }
 
   llevarFormulario(): void {
