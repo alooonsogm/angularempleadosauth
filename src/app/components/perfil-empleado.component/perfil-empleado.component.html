@@ -1,0 +1,27 @@
+@if (token == "") {
+    {{llevarFormulario()}}
+}@else {
+    <div>
+        <h1>Perfil del Empleado</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID Empleado</th>
+                    <th>Apellido</th>
+                    <th>Oficio</th>
+                    <th>Salario</th>
+                    <th>Director</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{empleado.idEmpleado}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.oficio}}</td>
+                    <td>{{empleado.salario}}</td>
+                    <td>{{empleado.director}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
